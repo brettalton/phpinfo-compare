@@ -1,0 +1,15 @@
+This PHP script, originally written in 2009 or so, compares two phpinfo files, generated from <?php phpinfo(); ?> on two different servers.
+
+The way the script currently works is by editing the bottom of the file and changing the variables $site1 and $site2. The phpinfo files can be on the internet or from your local machine, just so long as the files are accessible.
+
+If you're on Debian or Ubuntu, you'll need to install php5-curl via,
+
+sudo aptitude install php5-curl
+
+cURL is required to reach out to files on the internet. If you're on Windows, Mac or another flavour of Linux, you'll have to figure out how to install or enable the PHP cURL plugin. You may be luckily and have it already installed and enabled.
+
+This script uses GPLed code from one author and code from http://php.net -- left in the comments section -- which I beleive is public domain. So because it uses GPL code, I must also license it as GPL. I'd rather license it as MIT, so if someone can tell me how I can get around this, please let me know.
+
+My original blog post regarding this script: http://blog.brettalton.com/2010/05/08/compare-phpinfos-across-two-servers/
+
+Enjoy!
