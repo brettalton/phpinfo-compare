@@ -310,8 +310,8 @@ function phpinfo_to_array($data)
  */
 
 // compare two different phpinfos
-$site1 = 'http://5.61.24.219/~sarircom/info.php';
-$site2 = 'http://sarirservice.org/dev/info.php';
+$site1 = 'http://example.com/phpinfo.php';
+$site2 = 'http://example2.com/phpinfo.php';
 
 // if required, use curl_website($site1,username,password);
 $data1 = curl_website($site1);
