@@ -262,7 +262,7 @@ function formatline($nr1, $nr2, $stat, &$value)  #change to $value if problems
 // pull the content via curl, allow for basic authorization
 function curl_website($url, $username = NULL, $password = NULL)
 {
-	if (preg_match('/^http:\/\//i',$url))
+	if (preg_match('/^https?:\/\//i',$url))
 	{
 		$ch = curl_init();
 		curl_setopt($ch, CURLOPT_URL, $url);
