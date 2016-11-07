@@ -311,7 +311,7 @@ function phpinfo_to_array($data)
 
 // compare two different phpinfos
 $site1 = 'http://example.com/phpinfo.php';
-$site2 = 'http://example.com/phpinfo-2.php';
+$site2 = 'http://example2.com/phpinfo.php';
 
 // if required, use curl_website($site1,username,password);
 $data1 = curl_website($site1);
@@ -333,15 +333,15 @@ echo '<pre>';
 
 echo '<h1>Compare Two phpinfo() Files</h1>';
 
-echo '<p>Comparison between <span style="color: red;">'.$site1.'</span> and <span style="color: blue;">'.$site2.'</span></p>';
+echo '<p>Comparison between <span style="color: red;"> Site 1: '.$site1.'</span> and <span style="color: blue;"> Site 2: '.$site2.'</span></p>';
 
 // side-by-side comparison
 echo '<h2>side-by-side comparison</h2>';
 foreach ($array1 as $key => $value)
 {
 	echo '<span style="font-weight: bold;">'.$key.'</span>'."\n";
-	echo 'array1: '.$value."\n";
-	echo 'array2: '.$array2[$key]."\n";
+	echo '<span style="color: red;">Site 1: '.$value.'</span>'."\n";
+	echo '<span style="color: blue;">Site 2: '.$array2[$key].'</span>'."\n";
 	if ($value != $array2[$key])
 	{
 		echo '<span style="text-decoration: underline;">diff</span>'."\n";
